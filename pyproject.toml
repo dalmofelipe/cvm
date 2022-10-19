@@ -1,0 +1,26 @@
+[tool.poetry]
+name = "py-template"
+version = "0.1.0"
+description = "Template da Python Week 22"
+authors = ["Bruno Rocha <rochacbruno@gmail.com>"]
+include = ["py-template/settings.toml"]
+
+[tool.poetry.dependencies]
+python = "^3.10"
+sqlmodel = "^0.0.6"
+fastapi = "^0.75.2"
+typer = "^0.4.1"
+rich = "^12.2.0"
+dynaconf = "^3.1.8"
+black = "^22.3.0"
+flake8 = "^4.0.1"
+
+[tool.poetry.dev-dependencies]
+ipython = "^8.2.0"
+
+[tool.poetry.scripts]
+py-template = "py-template.__main__:main"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
