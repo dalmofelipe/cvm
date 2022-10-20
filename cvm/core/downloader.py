@@ -46,5 +46,5 @@ def downloading() -> None:
             filezip = zipfile.ZipFile(filebytes)
             filezip.extractall(f"{DOWNLOAD_PATH}/{y}")
             print(f"salvo com sucesso no diretório: {DOWNLOAD_PATH}/{y}")
-        except Exception:
-            print("Opss... algo deu errado ao baixar arquivos")
+        except Exception as e:
+            print(f" Opss... algo deu errado ao baixar arquivos!\n{e}")

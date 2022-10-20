@@ -13,6 +13,16 @@ class Downloader(SQLModel, table=True):
     success:bool = Field(default=False)
 
 
+class Uploader(SQLModel, table=True):
+
+    __tablename__ : str  = 'tb_uploads'
+
+    id: Optional[int] = Field(default=None, primary_key=True)
+    created_at: datetime = Field(default_factory=datetime.now)
+    message:str
+    success:bool = Field(default=False)
+
+
 class CiaAberta(SQLModel, table=True):
     
     __tablename__ : str  = 'tb_cia_aberta'

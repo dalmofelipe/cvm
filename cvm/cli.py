@@ -1,7 +1,9 @@
-from datetime import timedelta
 import typer
 
+from datetime import timedelta
+
 from cvm.core.downloader import TODAY, downloading, get_last_download_date, register_download
+from cvm.core.uploader import uploading, get_last_upload_date, register_upload
 
 
 main = typer.Typer(help="API Rest da Comissão de Valores Mobiliários")
@@ -23,15 +25,12 @@ def download():
     downloading()
 
 
-@main.command('validate')
-def download_dir_validate():
-    """valida a estrutura da pasta download se esta viavel para upload dos dados"""
-    print('download dir ok...')
-    pass
-
-
 @main.command('upload')
 def database_upload():
     """Sobe os dados dos arquivos CSVs da pasta download para o banco de dados"""
-    print('upload ok...')
-    pass
+    last = get_last_upload_date()
+    if last and TODAY.__sub__(last)  < timedelta(days=7):
+        print(f"já foi realizado o upload essa semana no dia {last}")
+        return
+    register_upload()
+    uploading()

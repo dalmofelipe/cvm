@@ -12,3 +12,4 @@ services:
       - 5432:5432
     volumes:
       - ~/dev/pg-cvm:/var/lib/postgresql/data/pgdata
+      - ../downloads:/downloads
