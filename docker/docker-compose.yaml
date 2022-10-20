@@ -1,0 +1,14 @@
+version: '3.9'
+services:
+  db:
+    container_name: pg-cvm
+    image: postgres:latest
+    environment:
+      - POSTGRES_DB=cvm
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=123456
+      - PGDATA=/var/lib/postgresql/data/pgdata
+    ports:
+      - 5432:5432
+    volumes:
+      - ~/dev/pg-cvm:/var/lib/postgresql/data/pgdata

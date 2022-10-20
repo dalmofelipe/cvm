@@ -3,7 +3,7 @@ from dynaconf import Dynaconf
 
 
 settings = Dynaconf(
-    envvar_prefix="py-template",
+    envvar_prefix="cvm",
     root_path=os.path.dirname(__file__),
     settings_files=["settings.toml"],
 )
