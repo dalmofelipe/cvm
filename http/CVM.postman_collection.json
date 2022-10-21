@@ -1,0 +1,70 @@
+{
+	"variables": [],
+	"info": {
+		"name": "CVM",
+		"_postman_id": "42316eb4-84de-0f55-bb86-1fdac81cd80f",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "CiaAberta",
+			"description": "",
+			"item": [
+				{
+					"name": "Get By Name and Query Filters",
+					"request": {
+						"url": {
+							"raw": "http://localhost:8000/cia-aberta?name=cemig geracao&limit=5&page=3",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"cia-aberta"
+							],
+							"query": [
+								{
+									"key": "name",
+									"value": "cemig geracao",
+									"equals": true,
+									"description": ""
+								},
+								{
+									"key": "limit",
+									"value": "5",
+									"equals": true,
+									"description": ""
+								},
+								{
+									"key": "page",
+									"value": "3",
+									"equals": true,
+									"description": ""
+								}
+							],
+							"variable": []
+						},
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Get By ID",
+					"request": {
+						"url": "http://localhost:8000/cia-aberta/9273",
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"description": ""
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
