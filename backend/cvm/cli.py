@@ -6,7 +6,7 @@ from cvm.core.downloader import TODAY, downloading, get_last_download_date, regi
 from cvm.core.uploader import uploading, get_last_upload_date, register_upload
 
 
-main = typer.Typer(help="API REST dos dados abertos da Comissão de Valores Mobiliários")
+main = typer.Typer(help="API REST para os dados abertos da Comissão de Valores Mobiliários")
 
 
 @main.command('download')

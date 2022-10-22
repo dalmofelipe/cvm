@@ -15,7 +15,7 @@
 					"name": "Get By Name and Query Filters",
 					"request": {
 						"url": {
-							"raw": "http://localhost:8000/cia-aberta?name=cemig geracao&limit=5&page=3",
+							"raw": "http://localhost:8000/cia-aberta?limit=5&page=1",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -26,12 +26,6 @@
 							],
 							"query": [
 								{
-									"key": "name",
-									"value": "cemig geracao",
-									"equals": true,
-									"description": ""
-								},
-								{
 									"key": "limit",
 									"value": "5",
 									"equals": true,
@@ -39,7 +33,7 @@
 								},
 								{
 									"key": "page",
-									"value": "3",
+									"value": "1",
 									"equals": true,
 									"description": ""
 								}
@@ -57,6 +51,17 @@
 					"name": "Get By ID",
 					"request": {
 						"url": "http://localhost:8000/cia-aberta/9273",
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Get Root",
+					"request": {
+						"url": "http://localhost:8000",
 						"method": "GET",
 						"header": [],
 						"body": {},

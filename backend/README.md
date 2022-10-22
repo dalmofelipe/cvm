@@ -1,3 +1,3 @@
 ### CVM 
 
-API Rest do portal aberto de dados da Comissão de Valores Mobiliários
+API REST para os dados abertos da Comissão de Valores Mobiliários

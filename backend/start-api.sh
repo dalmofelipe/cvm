@@ -2,4 +2,4 @@
 
 echo "iniciando api rest"
 
-uvicorn cvm.api:api --reload
+uvicorn cvm.api.main:app --reload
