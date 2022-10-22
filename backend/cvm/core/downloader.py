@@ -14,7 +14,7 @@ from cvm.models import Downloader
 
 TODAY = datetime.now()
 YEAR_PRESENT = TODAY.year
-DOWNLOAD_PATH = from_root('downloads', mkdirs=True)
+DOWNLOAD_PATH = from_root('backend','downloads', mkdirs=True)
 
 
 def get_last_download_date() -> Union[bool,datetime]:

@@ -6,7 +6,10 @@ from cvm.models import CiaAberta
 from cvm.serializers import CiaAbertaOut
 
 
-def get_all_cia_aberta_from_db(limit:int = 10, page:int = 0) -> List[CiaAbertaOut]:
+def get_all_cia_aberta_from_db(
+    limit:int = 10, 
+    page:int = 0
+) -> List[CiaAbertaOut]:
     if page <= 0 or limit <= 0:
         return []
 
