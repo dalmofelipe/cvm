@@ -18,7 +18,6 @@ routes = APIRouter(
 @routes.get(
     "/", 
     response_model=List[CiaAbertaOut],
-    
 )
 async def show_by_filters_cia_aberta(
     name: Optional[str] = None,
@@ -37,4 +36,5 @@ async def show_by_filters_cia_aberta(
 async def show_by_id_cia_aberta(
     cia_id:int
 ) -> CiaAbertaOut:
+    """CiaAbertaOut"""
     return get_by_id_cia_aberta_from_db(cia_id)
