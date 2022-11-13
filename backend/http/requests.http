@@ -2,5 +2,10 @@
 GET http://localhost:8000 HTTP/1.1
 
 ###
-GET http://localhost:8000/cia-aberta?cia_name=minas gerais&limit=10&page=1 HTTP/1.1
+GET http://localhost:8000/cia-aberta?limit=500&page=1&name=cemig HTTP/1.1
 
+###
+GET http://localhost:8000/cia-aberta?limit=100&page=1&name=minas gerais HTTP/1.1
+
+###
+GET http://localhost:8000/cia-aberta?limit=100&page=1&name=dexco HTTP/1.1

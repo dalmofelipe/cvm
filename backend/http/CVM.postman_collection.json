@@ -15,7 +15,7 @@
 					"name": "Get By Name and Query Filters",
 					"request": {
 						"url": {
-							"raw": "http://localhost:8000/cia-aberta?limit=5&page=1",
+							"raw": "http://localhost:8000/cia-aberta?limit=5&page=1&name=inter",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -36,6 +36,12 @@
 									"value": "1",
 									"equals": true,
 									"description": ""
+								},
+								{
+									"key": "name",
+									"value": "inter",
+									"equals": true,
+									"description": ""
 								}
 							],
 							"variable": []
@@ -48,9 +54,20 @@
 					"response": []
 				},
 				{
+					"name": "Get ALL",
+					"request": {
+						"url": "http://localhost:8000/cia-aberta",
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"description": ""
+					},
+					"response": []
+				},
+				{
 					"name": "Get By ID",
 					"request": {
-						"url": "http://localhost:8000/cia-aberta/9273",
+						"url": "http://localhost:8000/cia-aberta/19273",
 						"method": "GET",
 						"header": [],
 						"body": {},

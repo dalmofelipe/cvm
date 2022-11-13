@@ -1,4 +1,4 @@
-name = "cvm"
+name="cvm"
 
 [database]
 name="cvm"
@@ -6,4 +6,6 @@ user="postgres"
 password="123456"
 host="127.0.0.1"
 port="5432"
+schema="cvm"
+# se necessário, informar o schema do banco em search_path. 'cvm' neste caso.
 options="-c search_path=cvm,public"

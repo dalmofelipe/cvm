@@ -1,6 +1,6 @@
 #!/bin/bash
 
-echo "Informe o novo nome do projeto: ";
+echo "Informe o novo nome do projeto >>> ";
 
 # entrada de dados em shell
 read NEW_NAME;
@@ -11,15 +11,15 @@ NEW_NAME="${NEW_NAME,,}"
 # lenght string
 LEN_NAME=${#NEW_NAME}
 
-# comparação menor que 'less then'
+# comparação 'menor que' '<' 'less then'
 if [ $LEN_NAME -lt 3 ]
 then 
-    echo "O nome deve conter no minimo 3 letras!"
+    echo "NOME deve conter no minimo 3 letras!"
     # interrompe script
     exit
 fi 
 
-echo "renaming project: "$NEW_NAME;
+echo "renomeando o projeto: "$NEW_NAME;
 
 # renomeia pasta na raiz do repositório
 mv py-template $NEW_NAME; 

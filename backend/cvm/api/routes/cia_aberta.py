@@ -1,4 +1,3 @@
-from pydoc import describe
 from fastapi import APIRouter
 from typing import List, Optional
 
@@ -30,8 +29,7 @@ async def show_by_filters_cia_aberta(
 
 @routes.get(
     "/{cia_id:int}", 
-    response_model=CiaAbertaOut,
-    responses = { 404: { 'description': 'informe um ID dentro de um interválo válido' }}
+    response_model=CiaAbertaOut
 )
 async def show_by_id_cia_aberta(
     cia_id:int

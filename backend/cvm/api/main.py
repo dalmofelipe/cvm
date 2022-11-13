@@ -1,5 +1,4 @@
-from datetime import datetime
-from fastapi import FastAPI, APIRouter
+from fastapi import FastAPI
 
 from cvm.api.routes import cia_aberta
 from cvm.api.internal import admin
